@@ -1,0 +1,62 @@
+<head>
+  <title>Extra Medium</title>
+</head>
+
+<body>
+  {{> header}}
+  {{> main}}
+</body>
+
+<template name="header">
+  <header>
+    <h1>Extra Medium</h1>
+    <div class="description">
+      // Restore collections to their former glory by providing a third-party replacement<br>
+      // In case you forgot the old goodness:
+      <ul>
+        <li>posts can belong to multiple collections</li>
+        <li>open submission of posts to collections</li>
+      </ul>
+    </div>
+    {{> loginButtons}}
+  </header>
+</template>
+
+<template name="main">
+  <div id="main">
+    <div id="listContainer">
+      <h1>Collections</h1>
+
+      <ul class="collectionsList">
+        {{#each collections}}
+          {{> collectionItem}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div id="collection">
+      {{> UI.dynamic template="collection" data=getCollection}}
+    </div>
+  </div>
+</template>
+
+<template name="collectionItem">
+  <li class="collectionItem">
+    <div class="info">
+      <div class="name">{{name}}</div>
+      <button class="follow">
+        {{followLabel}} | {{followerCount}} 
+      </button>
+    </div>
+  </li>
+</template>
+
+<template name="collection">
+  <h1>{{name}}</h1>
+  <div>Owner: {{owner.profile.name}}</div>
+  {{#each posts}}
+    <div>
+      <a href="{{url}}" target="_blank">{{name}}</a>
+    </div>
+  {{/each}}
+</template>

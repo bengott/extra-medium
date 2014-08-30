@@ -1,0 +1,35 @@
+@import 'nib'
+
+body
+  font-family Verdana
+
+header
+  .description
+    font-family Georgia
+
+h1
+  font-size 50px
+  color rgba(0,0,0,0.8)
+
+#main
+  width 1000px
+
+#listContainer
+  width 400px
+  float left
+  ul.collectionsList
+    list-style-type none
+    li.collectionItem
+      padding-bottom 1em
+      .info
+        .name
+          cursor pointer
+          &.selected
+            color #F00
+          &:hover
+            text-decoration underline
+
+#collection
+  width 500px
+  float left
+  padding-left 100px
