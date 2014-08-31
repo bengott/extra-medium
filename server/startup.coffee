@@ -53,37 +53,37 @@ Meteor.startup ->
 
   # And Then Posts (An den?)
   Posts.insert
-    name: "I See Your Foo Is Pretty Good..."
+    title: "I See Your Foo Is Pretty Good..."
     url: "https://medium.com/about/welcome-to-medium-9e53ca408c48"
     collectionIds: [
       Collections.findOne(name: "My Foo Is Better Than Your Foo")._id
     ]
   Posts.insert
-    name: "Foo Part 1"
+    title: "Foo Part 1"
     url: "https://medium.com/about/welcome-to-medium-9e53ca408c48"
     collectionIds: [
       Collections.findOne(name: "My Foo Is Better Than Your Foo")._id
     ]
   Posts.insert
-    name: "Foo Part 2"
+    title: "Foo Part 2"
     url: "https://medium.com/about/welcome-to-medium-9e53ca408c48"
     collectionIds: [
       Collections.findOne(name: "My Foo Is Better Than Your Foo")._id
     ]
   Posts.insert
-    name: "Yin Part 1"
+    title: "Yin Part 1"
     url: "https://medium.com/about/welcome-to-medium-9e53ca408c48"
     collectionIds: [
       Collections.findOne(name: "The Science of Yin")._id
     ]
   Posts.insert
-    name: "Yin and Stuff"
+    title: "Yin and Stuff"
     url: "https://medium.com/about/welcome-to-medium-9e53ca408c48"
     collectionIds: [
       Collections.findOne(name: "The Science of Yin")._id
     ]
   Posts.insert
-    name: "The Life of Yang Bar Baz"
+    title: "The Life of Yang Bar Baz"
     url: "https://medium.com/about/welcome-to-medium-9e53ca408c48"
     collectionIds: [
       Collections.findOne(name: "The Art of Yang")._id
@@ -91,7 +91,7 @@ Meteor.startup ->
       Collections.findOne(name: "Life Is a Baz")._id
     ]
   Posts.insert
-    name: "Yin Yang Foo"
+    title: "Yin Yang Foo"
     url: "https://medium.com/about/welcome-to-medium-9e53ca408c48"
     collectionIds: [
       Collections.findOne(name: "The Science of Yin")._id
@@ -99,13 +99,13 @@ Meteor.startup ->
       Collections.findOne(name: "My Foo Is Better Than Your Foo")._id
     ]
   Posts.insert
-    name: "The Art of Yin"
+    title: "The Art of Yin"
     url: "https://medium.com/about/welcome-to-medium-9e53ca408c48"
     collectionIds: [
       Collections.findOne(name: "The Science of Yin")._id
     ]
   Posts.insert
-    name: "Foos and Bars and Bazzes"
+    title: "Foos and Bars and Bazzes"
     url: "https://medium.com/about/welcome-to-medium-9e53ca408c48"
     collectionIds: [
       Collections.findOne(name: "My Foo Is Better Than Your Foo")._id
@@ -113,7 +113,7 @@ Meteor.startup ->
       Collections.findOne(name: "Life Is a Baz")._id
     ]
   Posts.insert
-    name: "Bars Are Better Than Foos"
+    title: "Bars Are Better Than Foos"
     url: "https://medium.com/about/welcome-to-medium-9e53ca408c48"
     collectionIds: [
       Collections.findOne(name: "My Foo Is Better Than Your Foo")._id
