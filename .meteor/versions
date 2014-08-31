@@ -3,6 +3,9 @@ accounts-oauth@1.0.0
 accounts-twitter@1.0.0
 accounts-ui-unstyled@1.0.0
 accounts-ui@1.0.0
+aldeed:autoform@0.17.1
+aldeed:collection2@0.4.6
+aldeed:simple-schema@0.7.0
 application-configuration@1.0.0
 autopublish@1.0.0
 autoupdate@1.0.5
@@ -20,6 +23,7 @@ deps@1.0.1
 ejson@1.0.0
 follower-livedata@1.0.0
 geojson-utils@1.0.0
+handlebars@1.0.0
 html-tools@1.0.0
 htmljs@1.0.0
 http@1.0.3
@@ -35,6 +39,7 @@ meteor@1.0.2
 minifiers@1.0.2
 minimongo@1.0.1
 mongo-livedata@1.0.3
+mrt:moment@2.6.0
 oauth1@1.0.0
 oauth@1.0.0
 observe-sequence@1.0.1

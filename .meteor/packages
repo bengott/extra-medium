@@ -11,4 +11,6 @@ cryptoquick:stylus-multi
 accounts-twitter
 accounts-ui
 dburles:collection-helpers
+aldeed:collection2
+aldeed:autoform
 
