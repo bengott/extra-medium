@@ -7,8 +7,10 @@
       optional: true
     ownerId:
       type: String
+      regEx: SimpleSchema.RegEx.Id
     followerCount:
       type: Number
+      defaultValue: 0
   )
 )
 
@@ -19,6 +21,9 @@
     subtitle:
       type: String
       optional: true
+    url:
+      type: String
+      regEx: SimpleSchema.RegEx.Url
     createdAt:
       type: Date
       denyUpdate: true
