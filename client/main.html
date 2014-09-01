@@ -9,16 +9,16 @@
 
 <template name="header">
   <header>
-    <h1>Extra Medium</h1>
-    <div class="description">
-      // Restore collections to their former glory by providing a third-party replacement<br>
-      // In case you forgot the old goodness:
-      <ul>
-        <li>posts can belong to multiple collections</li>
-        <li>open submission of posts to collections</li>
-      </ul>
+    <div id="banner">
+      <img src="xm.png" />
+      <div class="container">
+        <div class="title">Extra Medium</div>
+        <div class="info secondaryFont">
+          Do you miss Medium's old collection functionality? This app aims to restore/replace it.
+        </div>
+      </div>
+      {{> loginButtons}}
     </div>
-    {{> loginButtons}}
   </header>
 </template>
 
@@ -34,8 +34,10 @@
       {{> insertCollectionForm}}
     </div>
     <div id="collection">
-      {{> UI.dynamic template="collection" data=selectedCollection}}
-      {{> insertPostForm}}
+      {{#if selectedCollection}}
+        {{> UI.dynamic template="collection" data=selectedCollection}}
+        {{> insertPostForm}}
+      {{/if}}
     </div>
   </div>
 </template>
