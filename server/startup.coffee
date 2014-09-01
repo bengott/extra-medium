@@ -55,6 +55,7 @@ Meteor.startup ->
   now = new Date
   Posts.insert
     title: "I See Your Foo Is Pretty Good..."
+    subtitle: "But My Foo Is Stronger"
     url: "https://medium.com/about/welcome-to-medium-9e53ca408c48"
     createdAt: now
     collectionIds: [

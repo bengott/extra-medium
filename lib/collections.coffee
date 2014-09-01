@@ -26,6 +26,7 @@
       regEx: SimpleSchema.RegEx.Url
     createdAt:
       type: Date
+      defaultValue: new Date
       denyUpdate: true
     collectionIds:
       type: [String]
