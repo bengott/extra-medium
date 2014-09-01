@@ -1,8 +1,6 @@
-UI.registerHelper "getCollection", ->
-  Collections.findOne(Session.get("collectionId"))
-
-Template.main.collections = ->
-  Collections.find().fetch()
+Template.main.helpers
+  collections: -> Collections.find().fetch()
+  selectedCollection: -> Collections.findOne(Session.get("collectionId"))
 
 Template.collectionItem.helpers
   followLabel: -> "follow"
@@ -14,3 +12,10 @@ Template.collectionItem.events
     Session.set("collectionId", @_id)
   "click button.follow": ->
     alert "follow " + @name
+
+AutoForm.hooks
+  insertCollectionForm:
+    before:
+      insert: (doc, template) ->
+        doc.ownerId = Meteor.userId()
+        return doc

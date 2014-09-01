@@ -26,16 +26,15 @@
   <div id="main">
     <div id="listContainer">
       <h1>Collections</h1>
-
       <ul class="collectionsList">
         {{#each collections}}
           {{> collectionItem}}
         {{/each}}
       </ul>
+      {{> insertCollectionForm}}
     </div>
-
     <div id="collection">
-      {{> UI.dynamic template="collection" data=getCollection}}
+      {{> UI.dynamic template="collection" data=selectedCollection}}
     </div>
   </div>
 </template>
@@ -52,11 +51,26 @@
 </template>
 
 <template name="collection">
-  <h1>{{name}}</h1>
-  <div>Owner: {{owner.profile.name}}</div>
+  <p>Collection: {{name}}</p>
+  <p>Description: {{description}}</p>
+  <p>Owner: {{owner.profile.name}}</p>
+  <hr>
+  <p>Posts:</p>
   {{#each posts}}
-    <div>
-      <a href="{{url}}" target="_blank">{{title}}</a>
-    </div>
+    <p><a href="{{url}}" target="_blank">{{title}}</a></p>
   {{/each}}
 </template>
+
+<template name="insertCollectionForm">
+  {{#if currentUser}}
+    {{#autoForm collection="Collections" id="insertCollectionForm" type="insert"}}
+      <fieldset>
+        <legend>New Collection</legend>
+        {{> afQuickField name='name'}}
+        {{> afQuickField name='description'}}
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Create</button>
+    {{/autoForm}}
+  {{/if}}
+</template>
+
