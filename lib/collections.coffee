@@ -14,7 +14,7 @@
   )
 )
 
-@Posts = new Meteor.Collection("posts",
+@Articles = new Meteor.Collection("articles",
   schema: new SimpleSchema(
     title:
       type: String
@@ -37,9 +37,9 @@
 # Helpers
 Collections.helpers
   owner: -> Meteor.users.findOne(@ownerId)
-  posts: -> Posts.find({collectionIds: @_id}).fetch()
+  articles: -> Articles.find({collectionIds: @_id}).fetch()
 
-Posts.helpers
+Articles.helpers
   collections: -> Collections.find({_id: {$in: @collectionIds}}).fetch()
 
 Meteor.users.helpers

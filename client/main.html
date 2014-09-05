@@ -36,7 +36,7 @@
     <div id="collection">
       {{#if selectedCollection}}
         {{> UI.dynamic template="collection" data=selectedCollection}}
-        {{> insertPostForm}}
+        {{> insertArticleForm}}
       {{/if}}
     </div>
   </div>
@@ -58,8 +58,8 @@
   <p>Description: {{description}}</p>
   <p>Owner: {{owner.profile.name}}</p>
   <hr>
-  <p>Posts:</p>
-  {{#each posts}}
+  <p>Articles:</p>
+  {{#each articles}}
     <p>
       <a href="{{url}}" target="_blank">{{title}}</a>
       <div class="subtitle">{{subtitle}}</div>
@@ -80,11 +80,11 @@
   {{/if}}
 </template>
 
-<template name="insertPostForm">
+<template name="insertArticleForm">
   {{#if currentUser}}
-    {{#autoForm collection="Posts" id="insertPostForm" type="insert"}}
+    {{#autoForm collection="Articles" id="insertArticleForm" type="insert"}}
       <fieldset>
-        <legend>{{addOrSubmit}} a Post</legend>
+        <legend>{{addOrSubmit}} an Article</legend>
         {{> afQuickField name='title'}}
         {{> afQuickField name='subtitle'}}
         {{> afQuickField name='url'}}

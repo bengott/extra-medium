@@ -13,7 +13,7 @@ Template.collectionItem.events
   "click button.follow": ->
     alert "follow " + @name
 
-Template.insertPostForm.helpers
+Template.insertArticleForm.helpers
   addOrSubmit: ->
     selectedCollection = Collections.findOne(Session.get("collectionId"))
     if Meteor.userId() is selectedCollection.ownerId
@@ -27,7 +27,7 @@ AutoForm.hooks
       insert: (doc, template) ->
         doc.ownerId = Meteor.userId()
         return doc
-  insertPostForm:
+  insertArticleForm:
     before:
       insert: (doc, template) ->
         doc.collectionIds = [Session.get("collectionId")]
