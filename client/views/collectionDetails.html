@@ -1,0 +1,19 @@
+<template name="collectionDetails">
+  <div id="collectionDetails">
+    {{#if selectedCollection}}
+      {{#with selectedCollection}}
+        <p>Collection: {{name}}</p>
+        <p>Description: {{description}}</p>
+        <p>Owner: {{owner.profile.name}}</p>
+        <hr>
+        <p>Articles:</p>
+        <ul>
+          {{#each articles}}
+            {{> articleItem}}
+          {{/each}}
+        </ul>
+        {{> insertArticleForm}}
+      {{/with}}
+    {{/if}}
+  </div>
+</template>

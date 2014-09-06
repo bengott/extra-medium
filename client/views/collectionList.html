@@ -1,0 +1,11 @@
+<template name="collectionList">
+  <div id="collectionList">
+    <h1>Collections</h1>
+    <ul>
+      {{#each collections}}
+        {{> collectionItem}}
+      {{/each}}
+    </ul>
+    {{> insertCollectionForm}}
+  </div>
+</template>

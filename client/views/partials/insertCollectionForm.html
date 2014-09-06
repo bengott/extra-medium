@@ -1,0 +1,12 @@
+<template name="insertCollectionForm">
+  {{#if currentUser}}
+    {{#autoForm collection="Collections" id="insertCollectionForm" type="insert"}}
+      <fieldset>
+        <legend>New Collection</legend>
+        {{> afQuickField name='name'}}
+        {{> afQuickField name='description'}}
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Create</button>
+    {{/autoForm}}
+  {{/if}}
+</template>
