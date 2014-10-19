@@ -7,10 +7,10 @@ Do you miss Medium's old collection functionality? Me too. This Meteor app aims 
 2. submit an article/story to **multiple** collections, not just one.
 
 Several people have written articles bemoaning the changes:  
-https://medium.com/@rumblepress/medium-dont-change-your-collection-submission-rules-ccdc04c39d61  
-http://www.socialmediatoday.com/content/how-medium-killed-its-best-feature-data-driven-love-letter  
-https://medium.com/human-communication/how-medium-is-stifling-creativitiy-894bb8f8db07  
-https://medium.com/goodux-badux/medium-what-did-you-do-ba0596ed9513  
+- https://medium.com/@rumblepress/medium-dont-change-your-collection-submission-rules-ccdc04c39d61  
+- http://www.socialmediatoday.com/content/how-medium-killed-its-best-feature-data-driven-love-letter  
+- https://medium.com/human-communication/how-medium-is-stifling-creativitiy-894bb8f8db07  
+- https://medium.com/goodux-badux/medium-what-did-you-do-ba0596ed9513
 
 The app is super ugly right now while I work on building out the basic relationships and functionality, but that's OK because of [The Iceberg Secret](http://www.joelonsoftware.com/articles/fog0000000356.html), right?
 
