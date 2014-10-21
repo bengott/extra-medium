@@ -17,4 +17,15 @@ Collections.attachSchema schema
 
 Collections.helpers
   owner: -> Meteor.users.findOne(@ownerId)
+  followers: -> Meteor.users.find({"profile.followedCollectionIds": @_id}).fetch()
+  userIsFollower: -> Meteor.user() && _.contains(Meteor.user().profile.followedCollectionIds, @_id) || false
+  followButtonText: -> if @userIsFollower() then "unfollow" else "follow"
+  followOrUnfollow: ->
+    if Meteor.userId()
+      if @userIsFollower()
+        Meteor.call "unfollowCollection", @_id
+      else
+        Meteor.call "followCollection", @_id
+    else
+      alert "Please sign in to follow a collection."
   articles: -> Articles.find({collectionIds: @_id}).fetch()

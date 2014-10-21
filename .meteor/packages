@@ -13,4 +13,5 @@ accounts-ui
 dburles:collection-helpers
 aldeed:collection2
 aldeed:autoform
+accounts-password
 

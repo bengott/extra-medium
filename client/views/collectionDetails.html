@@ -2,9 +2,18 @@
   <div id="collectionDetails">
     {{#if selectedCollection}}
       {{#with selectedCollection}}
-        <p>Collection: {{name}}</p>
+        <p>
+          Collection: {{name}}
+          <button class="followButton">{{followButtonText}} | {{followerCount}}</button>
+        </p>
         <p>Description: {{description}}</p>
-        <p>Owner: {{owner.profile.name}}</p>
+        <p>Owner: {{owner.username}}</p>
+        <p>Followers:</p>
+        <ul id="followers">
+          {{#each followers}}
+            <li class="followerItem">{{username}}</li>
+          {{/each}}
+        </ul>
         <hr>
         <p>Articles:</p>
         <ul>

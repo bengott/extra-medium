@@ -6,8 +6,9 @@ Meteor.startup ->
   Articles.remove {}
 
   # Insert Sample Data
-  # First Users  
+  # First Users
   benId = Meteor.users.insert
+    username: "bengott"
     profile:
       name: "Ben Gott"
     services:
@@ -19,37 +20,24 @@ Meteor.startup ->
         screenName: "BenGottAbides"
     emails: [
       { address: "bengott@gmail.com", verified: true }
-      { address: "another@different.com", verified: false }
-    ]
-
-  johnId = Meteor.users.insert
-    profile:
-      name: "John Doe"
-    emails: [
-      { address: "johndoe@email.com", verified: true }
     ]
   
   # Then Collections
   Collections.insert
     name: "My Foo Is Better Than Your Foo"
     ownerId: benId
-    followerCount: 100
   Collections.insert
     name: "Bars and Flys"
-    ownerId: johnId
-    followerCount: 10
+    ownerId: benId
   Collections.insert
     name: "Life Is a Baz"
     ownerId: benId
-    followerCount: 1000
   Collections.insert
     name: "The Science of Yin"
     ownerId: benId
-    followerCount: 0
   Collections.insert
     name: "The Art of Yang"
     ownerId: benId
-    followerCount: 42
 
   # And Then Articles (An den?)
   now = new Date
