@@ -2,12 +2,12 @@
   {{#if currentUser}}
     {{#autoForm collection="Articles" id="insertArticleForm" type="insert"}}
       <fieldset>
-        <legend>{{addOrSubmit}} an Article</legend>
+        <legend>{{addOrSubmitText}} an Article</legend>
         {{> afQuickField name='title'}}
         {{> afQuickField name='subtitle'}}
         {{> afQuickField name='url'}}
       </fieldset>
-      <button type="submit" class="btn btn-primary">{{addOrSubmit}}</button>
+      <button type="submit" class="btn btn-primary">{{addOrSubmitText}}</button>
     {{/autoForm}}
   {{/if}}
 </template>

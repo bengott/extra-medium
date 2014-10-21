@@ -1,5 +1,5 @@
 Template.insertArticleForm.helpers
-  addOrSubmit: ->
+  addOrSubmitText: ->
     selectedCollection = Collections.findOne(Session.get("collectionId"))
     if Meteor.userId() is selectedCollection.ownerId
       return "Add"
