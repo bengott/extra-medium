@@ -1,7 +1,8 @@
-Extra Medium
-============
+#Extra Medium
+####Replacement / Enhancement for Medium.com Collections
+--------------------------------------------------------
 
-Do you miss Medium's old collection functionality? Me too. This Meteor app aims to restore/replace it. In case you forgot, collections used to be more open. A user could:
+Do you miss Medium's old collection functionality? Me too. This Meteor app aims to bring it back. In case you forgot, collections used to be more open. A user could:
 
 1. submit an article/story to **any** collection without having to be pre-approved as a "writer" by the collection owner.  
 2. submit an article/story to **multiple** collections, not just one.
